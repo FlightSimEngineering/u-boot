@@ -663,7 +663,8 @@ int board_late_init(void)
 		setenv("boot_fit", "1");
 #endif
 
-#if !defined(CONFIG_SPL_BUILD)
+/*#if !defined(CONFIG_SPL_BUILD)*/
+#ifdef Noway
 	/* try reading mac address from efuse */
 	mac_lo = readl(&cdev->macid0l);
 	mac_hi = readl(&cdev->macid0h);
